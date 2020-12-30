@@ -3,7 +3,7 @@
 
 ---
 ## DB設計
-![image](https://user-images.githubusercontent.com/60286772/103384164-b7de8f00-4b38-11eb-890a-35b951b13497.png)
+![image](https://user-images.githubusercontent.com/60286772/103385980-0e9b9700-4b40-11eb-8f60-1ab81062264f.png)
 
 ### Usersテーブル
 |Column|Type|Options|
