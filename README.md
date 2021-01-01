@@ -43,3 +43,52 @@
 - has_one:  nearStore
 - has_one:  image
 ---
+
+### Ratesテーブル
+|Column|Type|Options|
+|------     |----       |-------|
+|user       |references |foregin: true|
+|camp       |references |foregin: true|
+|rate       |integer    ||
+
+### rate_Association
+- belongs_to: user
+- belongs_to: camp
+---
+
+### Commentsテーブル
+|Column|Type|Options|
+|------     |----       |-------|
+|user       |references |foregin: true|
+|camp       |references |foregin: true|
+|comment    |integer    ||
+
+### rate_Association
+- belongs_to: user
+- belongs_to: camp
+---
+
+### NearStoresテーブル
+|Column|Type|Options|
+|------     |----       |-------|
+|camp       |references |foregin: true|
+|storeName  |string     |null: false|
+|address    |string     |null: false, unique: true|
+|workHour   |time       ||
+
+### nearStore_Association
+- belongs_to: user
+- belongs_to: camp
+---
+
+### Imagesテーブル
+|Column|Type|Options|
+|------     |----       |-------|
+|camp       |references |foregin: true|
+|image      |string     ||
+|imageName  |string     ||
+
+### image_Association
+- belongs_to: user
+- belongs_to: camp
+---
