@@ -60,7 +60,7 @@
 |------     |----       |-------|
 |user       |references |foregin: true|
 |camp       |references |foregin: true|
-|rate       |integer    ||
+|rate       |integer    |null: false,|
 
 ### rate_Association
 - belongs_to: user
@@ -72,7 +72,7 @@
 |------     |----       |-------|
 |user       |references |foregin: true|
 |camp       |references |foregin: true|
-|comment    |integer    ||
+|comment    |integer    |null: false,|
 
 ### rate_Association
 - belongs_to: user
@@ -96,7 +96,7 @@
 |Column|Type|Options|
 |------     |----       |-------|
 |camp       |references |foregin: true|
-|image      |string     ||
+|image      |string     |null: false|
 |imageName  |string     ||
 
 ### image_Association
