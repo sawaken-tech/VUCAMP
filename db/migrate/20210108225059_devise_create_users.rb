@@ -9,8 +9,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string      :encrypted_password, null: false, default: ""
       t.date        :dirth
       t.string      :sex
-      # t.references  :rate
-      # t.references  :comment
+      t.references  :rate
+      t.references  :comment
 
       ## Recoverable
       t.string   :reset_password_token

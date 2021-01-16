@@ -1,0 +1,2 @@
+class NearStore < ApplicationRecord
+end

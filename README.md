@@ -60,7 +60,7 @@
 |------     |----       |-------|
 |user       |references |foregin: true|
 |camp       |references |foregin: true|
-|rate       |integer    |null: false,|
+|rate       |integer    |null: false|
 
 ### rate_Association
 - belongs_to: user
@@ -72,7 +72,7 @@
 |------     |----       |-------|
 |user       |references |foregin: true|
 |camp       |references |foregin: true|
-|comment    |integer    |null: false,|
+|comment    |integer    |null: false|
 
 ### rate_Association
 - belongs_to: user
