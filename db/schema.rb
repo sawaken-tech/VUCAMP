@@ -10,6 +10,111 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_01_16_233800) do
+
+  create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "namespace"
+    t.text "body"
+    t.string "resource_type"
+    t.bigint "resource_id"
+    t.string "author_type"
+    t.bigint "author_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
+    t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
+    t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+  end
+
+  create_table "admin_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_admin_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "camps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "campName", null: false
+    t.string "address", null: false
+    t.string "capacity"
+    t.bigint "image_id"
+    t.integer "price"
+    t.integer "level"
+    t.time "workHour"
+    t.bigint "nearStore_id"
+    t.bigint "rate_id"
+    t.bigint "comment_id"
+    t.index ["campName"], name: "index_camps_on_campName"
+    t.index ["comment_id"], name: "index_camps_on_comment_id"
+    t.index ["image_id"], name: "index_camps_on_image_id"
+    t.index ["nearStore_id"], name: "index_camps_on_nearStore_id"
+    t.index ["rate_id"], name: "index_camps_on_rate_id"
+  end
+
+  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "camp_id"
+    t.string "image", null: false
+    t.string "imageName"
+    t.index ["camp_id"], name: "index_images_on_camp_id"
+  end
+
+  create_table "near_stores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "camp_id"
+    t.string "storeName", null: false
+    t.string "address", null: false
+    t.time "workHour"
+    t.index ["camp_id"], name: "index_near_stores_on_camp_id"
+  end
+
+  create_table "postcomments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "camp_id"
+    t.integer "comment", null: false
+    t.index ["camp_id"], name: "index_postcomments_on_camp_id"
+    t.index ["user_id"], name: "index_postcomments_on_user_id"
+  end
+
+  create_table "rates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "camp_id"
+    t.integer "rate", null: false
+    t.index ["camp_id"], name: "index_rates_on_camp_id"
+    t.index ["user_id"], name: "index_rates_on_user_id"
+  end
+
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.date "birth"
+    t.string "sex"
+    t.bigint "rate_id"
+    t.bigint "comment_id"
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["comment_id"], name: "index_users_on_comment_id"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["name"], name: "index_users_on_name"
+    t.index ["rate_id"], name: "index_users_on_rate_id"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
 
 end
