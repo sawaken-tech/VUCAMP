@@ -12,7 +12,7 @@ class CreateCamps < ActiveRecord::Migration[5.2]
       t.time        :workHour
       t.references  :nearStore
       t.references  :rate
-      t.references  :comment
+      t.references  :postcomment
     end
   end
 end

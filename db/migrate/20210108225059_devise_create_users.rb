@@ -10,7 +10,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.date        :birth
       t.string      :sex
       t.references  :rate
-      t.references  :comment
+      t.references  :postcomment
 
       ## Recoverable
       t.string   :reset_password_token

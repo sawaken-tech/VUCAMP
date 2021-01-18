@@ -5,7 +5,7 @@ class CreateComments < ActiveRecord::Migration[5.2]
       t.timestamps
       t.references  :user
       t.references  :camp
-      t.integer     :comment,  null: false
+      t.string      :comment,  null: false
     end
   end
 end

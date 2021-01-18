@@ -18,38 +18,38 @@
 
 ### Usersテーブル
 |Column|Type|Options|
-|------     |----       |-------|
-|userName |string     |null: false, unique: true, index: true|
-|mail     |string     |null: false, unique: true|
-|password |string     |null: false, unique: true|
-|birth    |date       ||
-|sex      |string     ||
-|rate     |references |foregin: true|
-|comment  |references |foregin: true|
+|------       |----       |-------|
+|userName     |string     |null: false, unique: true, index: true|
+|email        |string     |null: false, unique: true|
+|password     |string     |null: false, unique: true|
+|birth        |date       ||
+|sex          |string     ||
+|rate         |references |foregin: true|
+|postcomment  |references |foregin: true|
 
 ### user_Association
-- has_many: camps  through: :comments, :rates
-- has_many: comments
+- has_many: camps  through: :postcomments, :rates
+- has_many: postcomments
 - has_many: rates
 ---
 
 ### Campsテーブル
 |Column|Type|Options|
-|------     |----       |-------|
-|campName   |string     |null: false, unique: true, index: true|
-|address    |string     |null: false, unique: true|
-|capacity   |string     ||
-|image      |references |foregin: true|
-|price      |integer    ||
-|level      |integer    ||
-|workHour   |time       ||
-|nearStore  |references |foregin: true|
-|rate       |references |foregin: true|
-|comment    |references |foregin: true|
+|------       |----       |-------|
+|campName     |string     |null: false, unique: true, index: true|
+|address      |string     |null: false, unique: true|
+|capacity     |string     ||
+|image        |references |foregin: true|
+|price        |integer    ||
+|level        |integer    ||
+|workHour     |time       ||
+|nearStore    |references |foregin: true|
+|rate         |references |foregin: true|
+|postcomment  |references |foregin: true|
 
 ### camp_Association
-- has_many: users  through: :comments, :rates
-- has_many: comments
+- has_many: users  through: :postcomments, :rates
+- has_many: postcomments
 - has_many: rates
 - has_one:  nearStore
 - has_one:  image
@@ -67,12 +67,12 @@
 - belongs_to: camp
 ---
 
-### Commentsテーブル
+### Postcommentsテーブル
 |Column|Type|Options|
 |------     |----       |-------|
 |user       |references |foregin: true|
 |camp       |references |foregin: true|
-|comment    |integer    |null: false|
+|postcomment|integer    |null: false|
 
 ### rate_Association
 - belongs_to: user
@@ -88,7 +88,6 @@
 |workHour   |time       ||
 
 ### nearStore_Association
-- belongs_to: user
 - belongs_to: camp
 ---
 
@@ -100,6 +99,5 @@
 |imageName  |string     ||
 
 ### image_Association
-- belongs_to: user
 - belongs_to: camp
 ---

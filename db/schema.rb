@@ -50,11 +50,11 @@ ActiveRecord::Schema.define(version: 2021_01_16_233800) do
     t.time "workHour"
     t.bigint "nearStore_id"
     t.bigint "rate_id"
-    t.bigint "comment_id"
+    t.bigint "postcomment_id"
     t.index ["campName"], name: "index_camps_on_campName"
-    t.index ["comment_id"], name: "index_camps_on_comment_id"
     t.index ["image_id"], name: "index_camps_on_image_id"
     t.index ["nearStore_id"], name: "index_camps_on_nearStore_id"
+    t.index ["postcomment_id"], name: "index_camps_on_postcomment_id"
     t.index ["rate_id"], name: "index_camps_on_rate_id"
   end
 
@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 2021_01_16_233800) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.bigint "camp_id"
-    t.integer "comment", null: false
+    t.string "comment", null: false
     t.index ["camp_id"], name: "index_postcomments_on_camp_id"
     t.index ["user_id"], name: "index_postcomments_on_user_id"
   end
@@ -104,15 +104,15 @@ ActiveRecord::Schema.define(version: 2021_01_16_233800) do
     t.date "birth"
     t.string "sex"
     t.bigint "rate_id"
-    t.bigint "comment_id"
+    t.bigint "postcomment_id"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["comment_id"], name: "index_users_on_comment_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["name"], name: "index_users_on_name"
+    t.index ["postcomment_id"], name: "index_users_on_postcomment_id"
     t.index ["rate_id"], name: "index_users_on_rate_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
