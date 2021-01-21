@@ -13,6 +13,14 @@ class CampsController < ApplicationController
 
   def camp_params
     params.require(:camp).permit(
+      :campName,
+      :address,
+      :capacity,
+      :image,
+      :price,
+      :lecel,
+      :workHour,
+      :nearStore
     )
   end
 
