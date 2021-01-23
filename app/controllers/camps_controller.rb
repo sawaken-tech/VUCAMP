@@ -8,7 +8,7 @@ class CampsController < ApplicationController
   end
 
   def create
-    @camp = Camp.new(camp_params)
+    @camp = Camp.create(camp_params)
   end
 
   def camp_params
