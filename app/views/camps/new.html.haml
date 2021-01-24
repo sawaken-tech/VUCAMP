@@ -1,29 +1,46 @@
 .newPage
   .newPage__title
   .newPage__formbox
-    .newPage__formbox__campname
-      .newPage__formbox__campname__title
-      .newPage__formbox__campname__form
-    .newPage__formbox__address
-      .newPage__formbox__address__title
-      .newPage__formbox__address__form
-    .newPage__formbox__capacity
-      .newPage__formbox__capacity__title
-      .newPage__formbox__capacity__form
-    .newPage__formbox__price
-      .newPage__formbox__price__title
-      .newPage__formbox__price__form
-    .newPage__formbox__workhour
-      .newPage__formbox__workhour__title
-      .newPage__formbox__workhour__form
-    .newPage__formbox__nearstore
-      .newPage__formbox__nearstore__title
-      .newPage__formbox__nearstore__form
-    .newPage__formbox__level
-      .newPage__formbox__level__title
-      .newPage__formbox__level__form
-    .newPage__formbox__image
-      .newPage__formbox__image__title
-      .newPage__formbox__image__form
-    .newPage__formbox__createbtn
-      .newPage__formbox__createbtn__btn
+    = form_for @camp do |f|
+      .newPage__formbox__campname
+        .newPage__formbox__campname__title
+          = f.label :title, "キャンプ場の名前"
+        .newPage__formbox__campname__form
+          = f.text_field :campName, placeholder: "キャンプ場"
+      .newPage__formbox__address
+        .newPage__formbox__address__title
+          = f.label :title, "住所"
+        .newPage__formbox__address__form
+          = f.text_field :address, placeholder: "住所"
+      .newPage__formbox__capacity
+        .newPage__formbox__capacity__title
+          = f.label :title, "所要人数"
+        .newPage__formbox__capacity__form
+          = f.text_field :capacity, placeholder: "所要人数"
+      .newPage__formbox__price
+        .newPage__formbox__price__title
+          = f.label :title, "価格"
+        .newPage__formbox__price__form
+          = f.text_field :price, placeholder: "価格"
+      .newPage__formbox__workhour
+        .newPage__formbox__workhour__title
+          = f.label :title, "営業時間"
+        .newPage__formbox__workhour__form
+          = f.text_field :workHour, placeholder: "営業時間"
+      .newPage__formbox__nearstore
+        .newPage__formbox__nearstore__title
+          = f.label :title, "近くのスーパー"
+        .newPage__formbox__nearstore__form
+          = f.text_field :nearStore, placeholder: "近くのスーパー"
+      .newPage__formbox__level
+        .newPage__formbox__level__title
+          = f.label :title, "難易度"
+        .newPage__formbox__level__form
+          = f.text_field :level, placeholder: "難易度"
+      .newPage__formbox__image
+        .newPage__formbox__image__title
+          = f.label :title, "写真"
+        .newPage__formbox__image__form
+          = f.text_field :image, placeholder: "写真"
+      .newPage__formbox__createbtn
+        .newPage__formbox__createbtn__btn
