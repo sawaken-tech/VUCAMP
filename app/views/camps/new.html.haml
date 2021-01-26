@@ -31,7 +31,7 @@
         .newPage__formbox__nearstore__title
           = f.label :title, "近くのスーパー"
         .newPage__formbox__nearstore__form
-          = f.text_field :nearStore, placeholder: "近くのスーパー"
+          -# = f.text_field :nearStore, placeholder: "近くのスーパー"
       .newPage__formbox__level
         .newPage__formbox__level__title
           = f.label :title, "難易度"
@@ -41,6 +41,6 @@
         .newPage__formbox__image__title
           = f.label :title, "写真"
         .newPage__formbox__image__form
-          = f.text_field :image, placeholder: "写真"
+          -# = f.text_field :image, placeholder: "写真"
       .newPage__formbox__createbtn
         = f.submit "登録", class: ".newPage__formbox__createbtn__btn"

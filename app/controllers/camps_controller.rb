@@ -9,6 +9,10 @@ class CampsController < ApplicationController
 
   def create
     @camp = Camp.create(camp_params)
+    unless @camp.valid?
+      flash.now[:alert] = @camp.errors.messages
+      render :new and return
+    end
   end
 
   def camp_params
