@@ -41,6 +41,6 @@
         .newPage__formbox__image__title
           = f.label :title, "写真"
         .newPage__formbox__image__form
-          -# = f.text_field :image, placeholder: "写真"
+          = f.file_field :image, placeholder: "写真"
       .newPage__formbox__createbtn
         = f.submit "登録", class: ".newPage__formbox__createbtn__btn"
