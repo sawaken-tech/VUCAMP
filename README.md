@@ -51,6 +51,7 @@
 - has_many: users  through: :postcomments, :rates
 - has_many: postcomments
 - has_many: rates
+- has_many:  nearStore
 - has_many:  image
 ---
 
