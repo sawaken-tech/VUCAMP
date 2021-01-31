@@ -8,6 +8,7 @@ class CampsController < ApplicationController
   end
 
   def create
+    binding.pry
     @camp = Camp.create(camp_params)
     unless @camp.valid?
       flash.now[:alert] = @camp.errors.messages
@@ -20,11 +21,11 @@ class CampsController < ApplicationController
       :campName,
       :address,
       :capacity,
-      :image,
       :price,
-      :lecel,
+      :level,
       :workHour,
-      :nearStore
+      nearStore_attributes: [:id, :storeName, :address],
+      images_attributes: [:id, :image]
     )
   end
 

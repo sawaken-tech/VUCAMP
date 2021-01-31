@@ -4,7 +4,7 @@ class CreateImages < ActiveRecord::Migration[5.2]
 
       t.timestamps
       t.references  :camp
-      t.string      :image,  null: false
+      t.string      :image
       t.string      :imageName
     end
   end

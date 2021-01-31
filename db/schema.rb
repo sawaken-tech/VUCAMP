@@ -44,16 +44,12 @@ ActiveRecord::Schema.define(version: 2021_01_16_233800) do
     t.string "campName", null: false
     t.string "address", null: false
     t.string "capacity"
-    t.bigint "image_id"
     t.integer "price"
     t.integer "level"
     t.time "workHour"
-    t.bigint "nearStore_id"
     t.bigint "rate_id"
     t.bigint "postcomment_id"
     t.index ["campName"], name: "index_camps_on_campName"
-    t.index ["image_id"], name: "index_camps_on_image_id"
-    t.index ["nearStore_id"], name: "index_camps_on_nearStore_id"
     t.index ["postcomment_id"], name: "index_camps_on_postcomment_id"
     t.index ["rate_id"], name: "index_camps_on_rate_id"
   end
@@ -62,7 +58,7 @@ ActiveRecord::Schema.define(version: 2021_01_16_233800) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "camp_id"
-    t.string "image", null: false
+    t.string "image"
     t.string "imageName"
     t.index ["camp_id"], name: "index_images_on_camp_id"
   end
@@ -71,8 +67,8 @@ ActiveRecord::Schema.define(version: 2021_01_16_233800) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "camp_id"
-    t.string "storeName", null: false
-    t.string "address", null: false
+    t.string "storeName"
+    t.string "address"
     t.time "workHour"
     t.index ["camp_id"], name: "index_near_stores_on_camp_id"
   end
