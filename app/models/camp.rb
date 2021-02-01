@@ -6,6 +6,7 @@ class Camp < ApplicationRecord
   has_many   :nearStore
   has_many   :image
 
+  accepts_nested_attributes_for :image
   validates :campName, :address, presence: true
 
 end
