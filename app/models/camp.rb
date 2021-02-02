@@ -7,6 +7,7 @@ class Camp < ApplicationRecord
   has_many   :image
 
   accepts_nested_attributes_for :image
+  accepts_nested_attributes_for :nieaStore
   validates :campName, :address, presence: true
 
 end
