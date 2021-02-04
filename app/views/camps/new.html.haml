@@ -28,10 +28,11 @@
         .newPage__formbox__workhour__form
           = f.text_field :workHour, placeholder: "営業時間"
       .newPage__formbox__nearstore
-        -# .newPage__formbox__nearstore__title
-        -#   = f.label :title, "近くのスーパー"
-        -# .newPage__formbox__nearstore__form
-        -#   = f.text_field :nearStore, placeholder: "近くのスーパー"
+        = f.fields_for :nearStores do |store|
+          .newPage__formbox__nearstore__title
+            = store.label :title, "近くのスーパー"
+          .newPage__formbox__nearstore__form
+            = store.text_field :storeName, placeholder: "近くのスーパー"
       .newPage__formbox__level
         .newPage__formbox__level__title
           = f.label :title, "難易度"

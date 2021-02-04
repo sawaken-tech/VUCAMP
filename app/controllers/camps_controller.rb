@@ -5,7 +5,8 @@ class CampsController < ApplicationController
 
   def new
     @camp = Camp.new
-    @camp.images.build 
+    @camp.images.build
+    @camp.nearStores.build
   end
 
   def create
@@ -25,7 +26,7 @@ class CampsController < ApplicationController
       :price,
       :level,
       :workHour,
-      # nearStores_attributes: [:id, :storeName, :address],
+      nearStores_attributes: [:id, :storeName, :address],
       images_attributes: [:id, :image]
     )
   end
