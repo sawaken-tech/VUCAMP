@@ -1,15 +1,19 @@
-.show
-  .show__title
-    .campIndex__box
-      .campIndex__box__name
+.campShow
+  .campShow__box
+    .campShow__box
+      .campShow__box__campName
         = @camp.campName
-      .campIndex__box__address
+      .campShow__box__address
         = @camp.address
-      .campIndex__box__capacity
+      .campShow__box__capacity
         = @camp.capacity
-      .campIndex__box__price
+      .campShow__box__price
         = @camp.price
-      .campIndex__box__level
+      .campShow__box__level
         = @camp.level
-      .campIndex__box__workHour
+      .campShow__box__workHour
         = @camp.workHour
+    .campShow__btn
+      .campShow__btn__return
+        = link_to root_path do
+          TOPへ
