@@ -15,19 +15,10 @@
 .campIndex
   .campIndex__box
     - @camps.each do |camp| 
-      .campIndex__box__name
-        = camp.campName
-      .campIndex__box__address
-        = camp.address
-      .campIndex__box__capacity
-        = camp.capacity
-      .campIndex__box__price
-        = camp.price
-      .campIndex__box__level
-        = camp.level
-      .campIndex__box__workHour
-        = camp.workHour
-
+      .campIndex__box__url
+        = link_to camp_path(camp) do
+          .campIndex__box__name
+            = camp.campName
 
 .goNewPage
   = link_to new_camp_path do
