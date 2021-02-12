@@ -23,6 +23,10 @@ class CampsController < ApplicationController
   def show
   end
 
+  def random
+  end
+  
+
   def camp_params
     params.require(:camp).permit(
       :campName,
