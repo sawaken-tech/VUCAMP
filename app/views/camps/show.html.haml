@@ -1,5 +1,8 @@
 .campShow
   .campShow__box
+    .campShow__box__images
+      - @camp.images.each do |image|
+        = image_tag image.image.to_s
     .campShow__box__campName
       = @camp.campName
     .campShow__box__address
