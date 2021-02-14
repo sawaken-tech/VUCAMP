@@ -7,7 +7,8 @@
     .topPage__main__centerBtn
       .topPage__main__centerBtn__title
         .topPage__main__centerBtn__title__top
-          SEARCH
+          = link_to random_camps_path do
+            SEARCH
         .topPage__main__centerBtn__title__under
           CAMP場を探す
 
@@ -23,3 +24,4 @@
 .goNewPage
   = link_to new_camp_path do
     CAMP場登録へ
+

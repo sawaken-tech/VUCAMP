@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root "camps#index"
 
   resources :camps do
+    collection do
+      get 'random', to: 'camps#random'
+    end
   end
 
 end
