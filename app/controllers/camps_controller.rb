@@ -1,6 +1,6 @@
 class CampsController < ApplicationController
 
-  before_action :set_camp, only: [:show]
+  before_action :set_camp, only: [:show, :random]
 
   def index
     @camps = Camp.all
@@ -24,8 +24,9 @@ class CampsController < ApplicationController
   end
 
   def random
+    @camp.sample(1)
   end
-  
+
 
   def camp_params
     params.require(:camp).permit(
