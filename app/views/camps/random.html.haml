@@ -1,2 +1,12 @@
 .random
-  = @random
+  - @random.each do |camp| 
+    .random.name 
+      = camp.campName
+      = camp.address
+
+
+
+.random__btn
+  .random__btn__return
+    = link_to root_path do
+      TOPへ
