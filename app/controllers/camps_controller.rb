@@ -23,7 +23,7 @@ class CampsController < ApplicationController
   def show
   end
 
-  def random
+  def vucamp
     @random = Camp.all.sample(1)
   end
 

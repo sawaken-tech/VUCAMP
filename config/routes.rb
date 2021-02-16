@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :camps do
     collection do
-      get 'random', to: 'camps#random'
+      get 'vucamp', to: 'camps#vucamp'
     end
   end
 
