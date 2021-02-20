@@ -1,18 +1,3 @@
--# .topPage
--#   .topPage__top
--#     .topPage__top__title
--#       VUCAMP
-  
--#   .topPage__main
--#     .topPage__main__centerBtn
--#       .topPage__main__centerBtn__title
--#         = link_to vucamp_camps_path do
--#           .topPage__main__centerBtn__title__top
--#             SEARCH
--#           .topPage__main__centerBtn__title__under
--#             CAMP場を探す
-
-
 .campIndex
   .campIndex__box
     - @camps.each do |camp| 
@@ -24,4 +9,3 @@
 .goNewPage
   = link_to new_camp_path do
     CAMP場登録へ
-
