@@ -1,3 +1,20 @@
 -# ヘッダー
 .header
-  .header__logo
+  .header__leftbox
+    .header__leftbox__logo
+  .header__rightbox
+    //ユーザー登録前
+    .header__rightbox__newuser
+      新規登録
+    .header__rightbox__login
+      login
+    //ユーザー登録後
+    .header__rightbox__menu
+      .header__rightbox__menu__what
+        = link_to "#" do
+          what
+      .header__rightbox__menu__index
+        = link_to camps_path do
+          index
+      .header__rightbox__menu__logout
+        logout
