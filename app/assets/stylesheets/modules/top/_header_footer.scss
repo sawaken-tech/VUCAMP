@@ -1,24 +1,33 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  background-color: coral;
+  color: white;
   &__leftbox {
     &__logo {
-
+      padding: 10px;
     }
   }
   &__rightbox {
+    display: flex;
+    justify-content: flex-end;
     &__newuser {
-
+      padding: 10px;
     }
     &__login {
-
+      padding: 10px;
     }
     &__menu {
+      display: flex;
       &__what {
-
+        padding: 10px;
       }
       &__index{
-
+        padding: 10px;
       }
-      &__logout
+      &__logout {
+        padding: 10px;
+      }
     }
   }
 }
