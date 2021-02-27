@@ -1,5 +1,5 @@
 .topPage {
-  background-color: gray;
+  // background-color: gray;
   height: 100%;
   &__top {
     &__title {
@@ -11,8 +11,8 @@
   &__main {
     padding: 50px;
     &__centerBtn {
-      border-radius: 50px;
-      font-size: 40px;
+      border-radius: 20px;
+      font-size: 20px;
       color: white;
       background-color: orange;
       text-align: center;

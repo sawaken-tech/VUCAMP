@@ -1,8 +1,8 @@
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: coral;
-  color: white;
+  background-color: black;
+  color: white; 
   &__leftbox {
     &__logo {
       padding: 10px 30px;
@@ -19,6 +19,9 @@
     }
     &__menu {
       display: flex;
+      a {
+        color: white; 
+      }
       &__what {
         padding: 10px;
       }
@@ -36,7 +39,7 @@
 }
 
 .footer {
-  background-color: coral;
+  background-color: black;
   color: white;
   &__logo {
     padding: 50px;
