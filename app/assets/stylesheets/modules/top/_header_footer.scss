@@ -5,7 +5,7 @@
   color: white;
   &__leftbox {
     &__logo {
-      padding: 10px;
+      padding: 10px 30px;
     }
   }
   &__rightbox {
@@ -22,12 +22,25 @@
       &__what {
         padding: 10px;
       }
-      &__index{
+      &__index {
+        padding: 10px;
+      }
+      &__create {
         padding: 10px;
       }
       &__logout {
         padding: 10px;
       }
     }
+  }
+}
+
+.footer {
+  background-color: coral;
+  color: white;
+  &__logo {
+    padding: 50px;
+    text-align: center;
+    
   }
 }
