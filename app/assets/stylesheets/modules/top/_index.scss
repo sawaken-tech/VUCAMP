@@ -7,6 +7,25 @@
       color: white;
       font-size: 32px;
     }
+    &__imagebox {
+      display: flex;
+      justify-content: space-between;
+      &__image0 {
+        width: 30%;
+        height: 200px;
+        background-color: blue;
+      }
+      &__image1 {
+        width: 30%;
+        height: 200px;
+        background-color: yellow;
+      }
+      &__image2 {
+        width: 30%;
+        height: 200px;
+        background-color: red;
+      }
+    }
   }
   &__main {
     padding: 50px;
