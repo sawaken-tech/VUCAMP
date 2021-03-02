@@ -30,11 +30,17 @@
   &__main {
     padding: 50px;
     &__centerBtn {
+      width: 300px;
+      padding: 10px;
+      margin: 0 auto;
       border-radius: 20px;
       font-size: 20px;
       color: white;
       background-color: orange;
       text-align: center;
+      a {
+        color: white;
+      }
       &__title {
         &__top {
         }
