@@ -1,6 +1,8 @@
 .vucamp {
+  background-color: gray;
   &__main {
     &__camp {
+      padding: 50px;
       &__id {
       }
       &__img {
@@ -23,7 +25,19 @@
   }
   &__under {
     &__btnbox {
-      &__return { 
+      padding: 50px;
+      &__return {
+        width: 300px;
+        padding: 10px;
+        margin: 0 auto;
+        border-radius: 20px;
+        font-size: 20px;
+        color: white;
+        background-color: orange;
+        text-align: center;
+        a {
+          color: white;
+        }  
       }
     }
   }
