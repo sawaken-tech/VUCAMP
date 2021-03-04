@@ -4,26 +4,25 @@
   .vucamp__main
     .vucamp__main__camp
       - @random.each do |camp|
-        .vucamp__main__camp__id 
-          = camp.id
         .vucamp__main__camp__img
           - camp.images.each do |image|
             = image_tag image.image.to_s
-        .vucamp__main__camp__name
-          = camp.campName
-        .vucamp__main__camp__address
-          = camp.address
-        .vucamp__main__camp__capacity
-          = camp.capacity
-        .vucamp__main__camp__price
-          = camp.price
-        .vucamp__main__camp__level
-          = camp.level
-        .vucamp__main__camp__workHour
-          = camp.workHour
-        .vucamp__main__camp__nearStore
-          - camp.nearStores.each do |store|
-            = store.storeName 
+        .vucamp__main__camp__infobox
+          .vucamp__main__camp__infobox__name
+            = camp.campName
+          .vucamp__main__camp__infobox__address
+            = camp.address
+          .vucamp__main__camp__infobox__capacity
+            = camp.capacity
+          .vucamp__main__camp__infobox__price
+            = camp.price
+          .vucamp__main__camp__infobox__level
+            = camp.level
+          .vucamp__main__camp__infobox__workHour
+            = camp.workHour
+          .vucamp__main__camp__infobox__nearStore
+            - camp.nearStores.each do |store|
+              = store.storeName
 
   .vucamp__under
     .vucamp__under__btnbox
