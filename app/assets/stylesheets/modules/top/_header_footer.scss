@@ -44,7 +44,17 @@
   color: white;
   &__logo {
     padding: 50px;
-    text-align: center;
-    
+    text-align: center; 
+  }
+  &__container {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    &__twitter {
+      padding: 20px;
+    }
+    &__instagram {
+      padding: 20px;
+    }
   }
 }
