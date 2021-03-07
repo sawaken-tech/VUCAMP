@@ -6,30 +6,38 @@
       padding: 200px;
       &__img {
         text-align: center;
+        padding-bottom: 100px;
       }
       &__infobox {
         text-align: center;
         &__name {
+          padding: 20px 0;
           font-size: 30px;
           text-align: left;
         }
         &__address {
+          padding: 20px 0;
           font-size: 20px;
           text-align: left;
         }
         &__capacity {
+          padding: 20px 0;
           text-align: left;
         }
         &__price {
+          padding: 20px 0;
           text-align: left;
         }
         &__level {
+          padding: 20px 0;
           text-align: left;
         }
         &__workHour {
+          padding: 20px 0;
           text-align: left;
         }
         &__nearStore {
+          padding: 20px 0;
           text-align: left;
         }
       }
