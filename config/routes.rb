@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/map_request', to: 'maps#map', as: 'map_request'
+  # get '/map_request', to: 'maps#map', as: 'map_request'
 
 end

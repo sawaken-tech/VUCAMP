@@ -26,6 +26,9 @@
             - camp.nearStores.each do |store|
               = store.storeName
 
+          .vucamp__main__camp__infobox__gmap
+            = render 'maps/map'
+
   .vucamp__under
     .vucamp__under__btnbox
       = link_to root_path do
