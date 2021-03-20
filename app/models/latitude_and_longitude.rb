@@ -1,0 +1,2 @@
+class LatitudeAndLongitude < ApplicationRecord
+end
