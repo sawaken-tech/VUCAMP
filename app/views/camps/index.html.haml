@@ -1,3 +1,5 @@
+= render 'top/header'
+
 .campIndex
   .campIndex__box
     - @camps.each do |camp| 
@@ -9,3 +11,5 @@
 .goNewPage
   = link_to new_camp_path do
     CAMP場登録へ
+
+= render 'top/footer'
