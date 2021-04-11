@@ -1,3 +1,5 @@
+= render 'top/header'
+
 .newPage
   .newPage__title
   .newPage__formbox
@@ -46,3 +48,5 @@
             = image.file_field :image, placeholder: "写真"
       .newPage__formbox__createbtn
         = f.submit "登録", class: ".newPage__formbox__createbtn__btn"
+
+= render 'top/footer'
