@@ -9,21 +9,15 @@
     }
     &__imagebox {
       display: flex;
-      justify-content: space-between;
-      &__image0 {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      height: 40rem;
+      &__image {
+        margin: 10px;
         width: 30%;
-        height: 200px;
-        background-color: blue;
-      }
-      &__image1 {
-        width: 30%;
-        height: 200px;
-        background-color: yellow;
-      }
-      &__image2 {
-        width: 30%;
-        height: 200px;
-        background-color: red;
+        height: 100px;
+        background-color: skyblue;
       }
     }
   }
