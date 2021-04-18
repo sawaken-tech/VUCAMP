@@ -2,7 +2,9 @@
 .header
   .header__leftbox
     .header__leftbox__logo
-      logo
+      = link_to root_path do
+        = image_tag "vucamp_logo.png", height:"100", width:"100"
+      -#   = image_tag vucamp_logo.PNG size: "100"
   .header__rightbox
     //ユーザー登録前
     .header__rightbox__newuser
