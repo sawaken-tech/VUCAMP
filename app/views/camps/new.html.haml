@@ -16,9 +16,17 @@
           = f.text_field :address, placeholder: "住所"
       .newPage__formbox__capacity
         .newPage__formbox__capacity__title
+
+
           = f.label :title, "所要人数"
-        .newPage__formbox__capacity__form
-          = f.text_field :capacity, placeholder: "所要人数"
+          - ["ソロ","ファミリー","グループ"].each do |capa| 
+            .newPage__formbox__capacity__form
+              = f.check_box :capacity ,{multiple: true}, capa, nil
+              = capa
+          - end
+        
+        
+         -# = f.text_field :capacity, placeholder: "所要人数"
       .newPage__formbox__price
         .newPage__formbox__price__title
           = f.label :title, "価格帯"
