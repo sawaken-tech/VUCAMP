@@ -32,10 +32,10 @@ class CampsController < ApplicationController
     params.require(:camp).permit(
       :campName,
       :address,
-      :capacity,
       :price,
       :level,
       :workHour,
+      capacity: [],
       nearStores_attributes: [:id, :storeName, :address],
       images_attributes: [:id, :image]
     )
