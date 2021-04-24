@@ -17,13 +17,11 @@
       .newPage__formbox__capacity
         .newPage__formbox__capacity__title
           = f.label :title, "所要人数"
-
         - @capas = ['ソロ', 'ファミリー', 'グループ']
         .newPage__formbox__capacity__form
           - @capas.each do |capa|
             = f.check_box :capacity, {multiple: true}, capa, nil 
             = capa
-        
       .newPage__formbox__price
         .newPage__formbox__price__title
           = f.label :title, "価格帯"
@@ -33,7 +31,11 @@
         .newPage__formbox__workhour__title
           = f.label :title, "営業時間"
         .newPage__formbox__workhour__form
-          = f.time_select :workHour, placeholder: "営業時間"
+          .newPage__formbox__workhour__form__time
+            = f.time_select :checkin, placeholder: "check-in"
+            〜
+          .newPage__formbox__workhour__form__time
+            = f.time_select :checkin, placeholder: "check-out"
       .newPage__formbox__nearstore
         = f.fields_for :nearStores do |store|
           .newPage__formbox__nearstore__title
