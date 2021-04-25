@@ -34,7 +34,8 @@ class CampsController < ApplicationController
       :address,
       :price,
       :level,
-      :workHour,
+      :checkout,
+      :checkin,
       capacity: [],
       nearStores_attributes: [:id, :storeName, :address],
       images_attributes: [:id, :image]

@@ -21,7 +21,8 @@
           .vucamp__main__camp__infobox__level
             = camp.level
           .vucamp__main__camp__infobox__workHour
-            = camp.workHour
+            = camp.checkin
+            = camp.checkout
           .vucamp__main__camp__infobox__nearStore
             - camp.nearStores.each do |store|
               = store.storeName
