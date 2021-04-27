@@ -1,4 +1,5 @@
 .topPage {
+  background-color: black;
   // width: 100%
   // height: 0;
   // padding-top: calc(1668 / 2388 * 100%);
@@ -9,7 +10,7 @@
   &__main {
     position: relative;
     img {
-      width: 100vw;
+      width: 100%;
     }
     // position: absolute;
     // padding: 30px 60px;
@@ -20,7 +21,7 @@
     // padding: 50px;
     &__centerBtn {
       position: absolute;
-      top: 100px;
+      top: 200px;
       left: 50%;
       transform: translateX(-50%);
       -webkit-transform: translateX(-50%);
