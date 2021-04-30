@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   background-color: black;
-  color: yellow;
+  color: #FFFF99;
   padding: 20px;
   &__leftbox {
     &__logo {
@@ -22,7 +22,7 @@
     &__menu {
       display: flex;
       a {
-        color: yellow; 
+        color: #FFFF99;
       }
       &__what {
         padding: 10px;
