@@ -3,12 +3,14 @@
 .topPage
   .topPage__main
     = image_tag "vucamp_mountain.png"
+    .topPage__main__message
+      VUCA　＋　CAMP　＝　予測不能なキャンプ場選び
     .topPage__main__centerBtn
       .topPage__main__centerBtn__title
         = link_to vucamp_camps_path do
           .topPage__main__centerBtn__title__top
             SEARCH
           .topPage__main__centerBtn__title__under
-            CAMP場を探す
+            CAMP場を決める
 
 = render 'footer'
