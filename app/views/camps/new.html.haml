@@ -39,9 +39,9 @@
       .newPage__formbox__nearstore
         = f.fields_for :nearStores do |store|
           .newPage__formbox__nearstore__title
-            = store.label :title, "近くのスーパー"
+            = store.label :title, "近接設備"
           .newPage__formbox__nearstore__form
-            = store.text_field :storeName, placeholder: "近くのスーパー"
+            = store.text_field :storeName, placeholder: "近接設備"
       .newPage__formbox__level
         .newPage__formbox__level__title
           = f.label :title, "難易度"
