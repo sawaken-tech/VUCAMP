@@ -3,7 +3,9 @@
     
   }
   &__formbox {
+    padding: 30px;
     &__campname {
+      padding: 10px;
       &__title {
 
       }
@@ -12,6 +14,7 @@
       }
     }
     &__address {
+      padding: 10px;
       &__title {
 
       }
@@ -20,6 +23,7 @@
       }
     }
     &__capacity {
+      padding: 10px;
       &__title {
 
       }
@@ -28,6 +32,7 @@
       }
     }
     &__price {
+      padding: 10px;
       &__title {
 
       }
@@ -36,6 +41,7 @@
       }
     }
     &__workhour {
+      padding: 10px;
       &__title {
 
       }
@@ -46,6 +52,7 @@
       }
     }
     &__nearstore {
+      padding: 10px;
       &__title {
 
       }
@@ -54,6 +61,7 @@
       }
     }
     &__level {
+      padding: 10px;
       &__title {
 
       }
@@ -62,6 +70,7 @@
       }
     }
     &__image {
+      padding: 10px;
       &__title {
 
       }
@@ -70,7 +79,7 @@
       }
     }
     &__createbtn {
-
+      padding: 10px;
     }
   }
 }

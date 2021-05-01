@@ -15,15 +15,20 @@
           .vucamp__main__camp__infobox__address
             = camp.address
           .vucamp__main__camp__infobox__capacity
+            おすすめ人数：
             = camp.capacity
           .vucamp__main__camp__infobox__price
+            価格：
             = camp.price
           .vucamp__main__camp__infobox__level
+            キャンプ難易度：
             = camp.level
           .vucamp__main__camp__infobox__workHour
+            営業時間：
             = camp.checkin
             = camp.checkout
           .vucamp__main__camp__infobox__nearStore
+            近くのスーパー：
             - camp.nearStores.each do |store|
               = store.storeName
 
