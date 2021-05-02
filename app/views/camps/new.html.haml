@@ -32,16 +32,16 @@
           = f.label :title, "営業時間"
         .newPage__formbox__workhour__form
           .newPage__formbox__workhour__form__time
-            = f.time_select :checkin, placeholder: "check-in"
+            = f.time_select :checkin, { include_blank: true, placeholder: "check-in" }
             〜
           .newPage__formbox__workhour__form__time
-            = f.time_select :checkin, placeholder: "check-out"
+            = f.time_select :checkin, { include_blank: true, placeholder: "check-out" }
       .newPage__formbox__nearstore
         = f.fields_for :nearStores do |store|
           .newPage__formbox__nearstore__title
             = store.label :title, "近接設備"
           .newPage__formbox__nearstore__form
-            = store.text_field :storeName, placeholder: "近接設備"
+            = store.text_field :storeName, placeholder: "コンビニ、温泉"
       .newPage__formbox__level
         .newPage__formbox__level__title
           = f.label :title, "難易度"
