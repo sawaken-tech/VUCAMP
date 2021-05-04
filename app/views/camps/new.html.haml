@@ -17,7 +17,7 @@
       .newPage__formbox__capacity
         .newPage__formbox__capacity__title
           = f.label :title, "所要人数"
-        - @capas = ['ソロ', 'ファミリー', 'グループ']
+        - @capas = "ソロ ファミリー グループ".split
         .newPage__formbox__capacity__form
           - @capas.each do |capa|
             = f.check_box :capacity, {multiple: true}, capa, nil 
@@ -35,7 +35,7 @@
             = f.time_select :checkin, { include_blank: true, placeholder: "check-in" }
             〜
           .newPage__formbox__workhour__form__time
-            = f.time_select :checkin, { include_blank: true, placeholder: "check-out" }
+            = f.time_select :checkout, { include_blank: true, placeholder: "check-out" }
       .newPage__formbox__nearstore
         = f.fields_for :nearStores do |store|
           .newPage__formbox__nearstore__title

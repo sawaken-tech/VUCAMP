@@ -25,8 +25,9 @@
             = camp.level
           .vucamp__main__camp__infobox__workHour
             営業時間：
-            = camp.checkin
-            = camp.checkout
+            = camp.checkin.strftime("%H:%M")
+            〜
+            = camp.checkout.strftime("%H:%M")
           .vucamp__main__camp__infobox__nearStore
             近接設備：
             - camp.nearStores.each do |store|
