@@ -46,7 +46,7 @@
         .newPage__formbox__level__title
           = f.label :title, "難易度"
         .newPage__formbox__level__form
-          = f.select :level, [["---", 0],["★★★★★", 5],["★★★★", 4],["★★★", 3],["★★", 2],["★", 1]]
+          = f.select :level, [["---", 0],["★★★★★", "★★★★★"],["★★★★", "★★★★"],["★★★", "★★★"],["★★", "★★"],["★", "★"]]
       .newPage__formbox__image
         = f.fields_for :images do |image|
           .newPage__formbox__image__title
