@@ -16,8 +16,9 @@
     .campShow__box__level
       = @camp.level
     .campShow__box__workHour
-      = @camp.checkin
-      = @camp.checkout
+      = @camp.checkin.strftime("%H:%M")
+      〜
+      = @camp.checkout.strftime("%H:%M")
   .campShow__btn
     .campShow__btn__return
       = link_to root_path do
